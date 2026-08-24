@@ -1,0 +1,57 @@
+---
+title: "How I Built Justice AI — An NLP-Powered Legal Assistant"
+publishedAt: "2025-06-10"
+summary: "A deep dive into how I designed and built Justice AI, an intelligent legal aid system using NLP and machine learning."
+author: "Simhadri Venkata Padmakar"
+tags: ["ai", "nlp", "machine-learning", "projects", "python"]
+---
+
+# How I Built Justice AI — An NLP-Powered Legal Assistant
+
+Legal systems are complicated. Legal *language* is even more so. Most people don't know their rights, and access to legal help is expensive. That problem is what sparked **Justice AI**.
+
+## The Problem
+
+Imagine someone gets into a dispute with their landlord. They don't know if they have a case. A lawyer costs ₹5,000 just for an initial consultation. So they do nothing — even when the law is on their side.
+
+**Justice AI** was built to change that.
+
+## What It Does
+
+At its core, Justice AI is a conversational assistant that:
+
+- **Understands legal queries** written in plain English
+- **Classifies cases** into relevant legal categories (tenant rights, consumer protection, labor law, etc.)
+- **Surfaces relevant sections** of Indian law using semantic search
+- **Summarizes** complex legal text into simple, actionable language
+
+## The Tech Stack
+
+```
+Python → Flask → NLP (spaCy + transformers) → FAISS vector search → React frontend
+```
+
+The pipeline works like this:
+
+1. User types a query ("My employer didn't pay me last month")
+2. NLP model extracts **intent** and **entities** (employer, payment, date)
+3. FAISS indexes pre-embedded law documents and finds the top-k matches
+4. A summarizer compresses the relevant sections
+5. Response is sent back to the React UI
+
+## What I Learned
+
+Building this project taught me more than any textbook:
+
+- **Vector embeddings** — how to represent meaning numerically
+- **Semantic search** — why keyword search fails for legal text
+- **REST API design** — keeping the frontend and ML model cleanly separated
+- **UI/UX for AI** — making responses feel trustworthy and readable
+
+## What's Next
+
+The current version handles English queries. I want to expand it to regional languages (Telugu, Hindi) using multilingual models — because that's where the real access gap is.
+
+---
+
+If you're curious about the technical implementation or want to collaborate, find me on [GitHub](https://github.com/simhadripadmakar). Let's build something meaningful. 💡
