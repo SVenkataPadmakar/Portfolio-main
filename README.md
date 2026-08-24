@@ -1,10 +1,10 @@
-# 🚀 Pavan Chowdary 3D Portfolio
+# 🚀 Simhadri Venkata Padmakar 3D Portfolio
 
-An interactive and modern 3D developer portfolio showcasing my projects, skills, experience, and achievements through immersive animations and a futuristic UI. Built with Next.js, React, TypeScript, and Spline, this portfolio highlights my passion for creating beautiful, high-performance web applications.
+An interactive, modern, and futuristic 3D developer portfolio showcasing my projects, skills, experience, and achievements through immersive animations and a futuristic UI. Built with Next.js, React, TypeScript, and Spline, this portfolio highlights my passion for AI engineering, Machine Learning, and Full-Stack development.
 
 > ⭐ If you like this portfolio, consider giving the repository a star!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Pavanchowdary-1111/Pavanchowdary-3D-portfolio)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SVenkataPadmakar/Portfolio-main)
 
 ![Portfolio Preview](public/assets/projects-screenshots/portfolio/landing.png)
 
@@ -12,14 +12,13 @@ An interactive and modern 3D developer portfolio showcasing my projects, skills,
 
 # ✨ Features
 
-- 🎹 Interactive 3D Keyboard showcasing technical skills
-- 🚀 Smooth GSAP & Framer Motion animations
-- 🌌 Modern Space-themed UI
-- 🌙 Light & Dark Mode
-- 📱 Fully Responsive Design
-- 📧 Contact Form powered by Resend
-- ⚡ Optimized with Next.js 14
-- 🎨 Modern UI using Tailwind CSS & Shadcn UI
+- 🎹 **Interactive 3D Keyboard** showcasing technical skills using Spline
+- 🤖 **Agentic AI & ML Showcases** focusing on Multi-Agent architectures
+- 🚀 **Smooth GSAP & Framer Motion** transitions and custom mouse trails
+- 🌌 **Modern Space-themed Cyberpunk UI** with customized themes and local disclaimers
+- 📱 **Fully Responsive Design** supporting mobile, tablet, and desktop viewports
+- 📧 **Interactive Contact Form** powered by Resend for seamless communication
+- ⚡ **Performance-Optimized** using Next.js App Router and Tailwind CSS
 
 ---
 
@@ -27,12 +26,13 @@ An interactive and modern 3D developer portfolio showcasing my projects, skills,
 
 | Layer | Technologies |
 |-------|--------------|
-| Framework | Next.js 14, React 18, TypeScript |
-| Styling | Tailwind CSS, Shadcn UI, Aceternity UI |
-| Animation | GSAP, Framer Motion |
+| Framework | Next.js, React, TypeScript |
+| AI & ML | LangGraph, LangChain, Python, FastAPI, OpenAI, Gemini |
+| Styling | Tailwind CSS, Shadcn UI, Aceternity UI, Sass |
+| Animation | GSAP, Framer Motion, Lenis |
 | 3D | Spline |
-| Backend | Resend |
-| Extras | Lenis, Zod, next-themes |
+| Databases | PostgreSQL (with pgvector), MongoDB, MySQL |
+| Deployment | Vercel, Docker, AWS |
 
 ---
 
@@ -41,8 +41,8 @@ An interactive and modern 3D developer portfolio showcasing my projects, skills,
 ## Clone Repository
 
 ```bash
-git clone https://github.com/Pavanchowdary-1111/Pavanchowdary-3D-portfolio.git
-cd Pavanchowdary-3D-portfolio
+git clone https://github.com/SVenkataPadmakar/Portfolio-main.git
+cd Portfolio-main
 ```
 
 ## Install Dependencies
@@ -59,7 +59,7 @@ pnpm install
 
 ## Environment Variables
 
-Create a `.env.local` file.
+Create a `.env.local` file at the root directory:
 
 ```env
 RESEND_API_KEY=your_resend_api_key
@@ -74,59 +74,61 @@ UMAMI_SITE_ID=
 npm run dev
 ```
 
-Open
-
-```
-http://localhost:3000
-```
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ---
 
 # 🎨 Personalization
 
-Update your information in
+Update your personal information in:
 
 ```
 src/data/config.ts
 ```
 
-Example
+Example configuration structure:
 
 ```ts
 const config = {
-  title: "Pavan Chowdary | Software Engineer",
+  title: "Simhadri Venkata Padmakar | AI Engineer & Full Stack Developer",
+
   description: {
-    long: "Portfolio of Reddy Durga Pavan Kumar showcasing MERN Stack, Frontend Development, ServiceNow Development, UI/UX Design, and award-winning projects.",
-    short: "Software Engineer | MERN Stack Developer | ServiceNow Developer",
+    long: "Portfolio of Simhadri Venkata Padmakar — AI Engineer, Machine Learning Developer, and Full Stack Engineer. Specializing in Multi-Agent AI systems, Generative AI, Next.js, React, Python, and scalable startup engineering.",
+    short: "Portfolio of Simhadri Venkata Padmakar — AI Engineer & Full Stack Developer.",
   },
 
   keywords: [
-    "Pavan Chowdary",
-    "MERN Stack",
-    "React",
-    "Next.js",
+    "Simhadri Venkata Padmakar",
+    "AI Engineer",
+    "Machine Learning Engineer",
+    "Generative AI Developer",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Python",
+    "LangChain",
+    "LangGraph",
+    "FastAPI",
     "TypeScript",
-    "Frontend Developer",
-    "ServiceNow Developer",
-    "Portfolio",
+    "Agentic AI",
+    "3D Portfolio",
   ],
 
-  author: "Reddy Durga Pavan Kumar",
+  author: "Simhadri Venkata Padmakar",
+  displayName: "Simhadri Venkata Padmakar",
+  location: "Andhra Pradesh, India",
 
-  email: "your-email@example.com",
-
-  site: "https://your-portfolio-link.com",
-
-  githubUsername: "Pavanchowdary-1111",
-
-  githubRepo: "Pavanchowdary-3D-portfolio",
+  email: "svenkatapadmakar@gmail.com",
+  site: "https://simhadripadmakar.dev",
+  githubUsername: "SVenkataPadmakar",
+  githubRepo: "Portfolio-main",
 
   social: {
-    linkedin: "https://linkedin.com/in/your-linkedin",
-    github: "https://github.com/Pavanchowdary-1111",
-    twitter: "",
-    instagram: "",
-    facebook: "",
+    twitter: "https://x.com/simhadripadmakar",
+    linkedin: "https://www.linkedin.com/in/simhadri-venkata-padmakar",
+    github: "https://github.com/SVenkataPadmakar",
+    leetcode: "https://leetcode.com/u/VenkyVox",
+    instagram: "https://www.instagram.com/simhadripadmakar",
   },
 };
 ```
@@ -135,75 +137,48 @@ const config = {
 
 # 📂 Customize Portfolio
 
-| File | Description |
+| File / Folder | Description |
 |------|-------------|
 | `src/data/config.ts` | Personal Information |
-| `src/data/projects.tsx` | Projects |
-| `src/data/constants.ts` | Skills & Experience |
-| `public/assets/` | Images & Icons |
+| `src/data/projects.tsx` | Featured and Web Projects |
+| `src/data/constants.ts` | Technical Skills & Work Experience |
+| `public/assets/` | Images, Screenshots, Spline Assets, and Audio |
 
 ---
 
 # ⌨️ Updating the 3D Keyboard
 
-The interactive keyboard is created using **Spline**.
+The interactive skills keyboard is built in **Spline**.
 
 To customize:
-
-1. Open `public/assets/skills-keyboard.spline`
-2. Edit the keycap icons
-3. Rename key objects to match entries in `src/data/constants.ts`
-4. Export and replace the existing Spline file
-
----
-
-# 🚀 Deployment
-
-Deploy easily using **Vercel**.
-
-1. Push your project to GitHub
-
-```bash
-git push -u origin main
-```
-
-2. Import the repository into Vercel.
-
-3. Add your environment variables.
-
-4. Deploy.
+1. Open `public/assets/skills-keyboard.spline` in Spline
+2. Edit keycaps, icons, or lighting
+3. Ensure keycap names match their corresponding entries in `src/data/constants.ts`
+4. Export as a Spline binary file and replace the existing one in `public/assets/`
 
 ---
 
 # 👨‍💻 About Me
 
-Hi, I'm **Reddy Durga Pavan Kumar**.
+Hi, I'm **Simhadri Venkata Padmakar**.
 
-I'm a passionate Software Engineer specializing in
-
-- MERN Stack Development
-- Frontend Development
-- ServiceNow Development
-- UI/UX Design
-- REST API Integration
-
-🏆 Achievements
-
-- 🥇 Winner — AIGNITE 3.0 Hackathon
-- 🥇 Winner — Utkarsh Hackathon
-- 🥇 HackerRank 24-Hour Hackathon Winner
-- 🥈 2nd Place — OOPS! Code It Right
+I'm an AI Engineer and Full-Stack Developer specializing in:
+- **Agentic AI & Generative AI**: Architecting multi-agent workflows using LangGraph and LangChain.
+- **Full-Stack Development**: Building modern web platforms using Next.js, React, Node.js, and FastAPI.
+- **Machine Learning & Deep Learning**: Implementing custom predictive models, OCR, and computer vision systems.
+- **Database Engineering**: Designing optimized relational schemas in PostgreSQL and MySQL.
 
 ---
 
 # 🔗 Repository
 
-https://github.com/Pavanchowdary-1111/Pavanchowdary-3D-portfolio
+https://github.com/SVenkataPadmakar/Portfolio-main
 
 ---
 
 # 📄 License
 
 This project is licensed under the MIT License.
+
 
 
