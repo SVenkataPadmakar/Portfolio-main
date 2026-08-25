@@ -8,16 +8,36 @@ import { cn } from "@/lib/utils";
 import { useToast } from "./ui/use-toast";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
-import { z } from "zod";
 import { config } from "@/data/config";
 
-const formSchema = z.object({
-  fullName: z.string().min(2, "Full name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email address"),
-  message: z.string().min(10, "Message must be at least 10 characters"),
-});
+interface FieldErrors {
+  fullName?: string;
+  email?: string;
+  message?: string;
+}
 
-type FieldErrors = Partial<Record<keyof z.infer<typeof formSchema>, string>>;
+function validateContactForm(data: { fullName: string; email: string; message: string }): {
+  isValid: boolean;
+  errors: FieldErrors;
+} {
+  const errors: FieldErrors = {};
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!data.fullName || data.fullName.trim().length < 2) {
+    errors.fullName = "Full name must be at least 2 characters";
+  }
+  if (!data.email || !emailRegex.test(data.email.trim())) {
+    errors.email = "Please enter a valid email address";
+  }
+  if (!data.message || data.message.trim().length < 10) {
+    errors.message = "Message must be at least 10 characters";
+  }
+
+  return {
+    isValid: Object.keys(errors).length === 0,
+    errors,
+  };
+}
 
 const ContactForm = () => {
   const [fullName, setFullName] = React.useState("");
@@ -33,14 +53,9 @@ const ContactForm = () => {
     e.preventDefault();
     setErrors({});
 
-    const result = formSchema.safeParse({ fullName, email, message });
-    if (!result.success) {
-      const fieldErrors: FieldErrors = {};
-      result.error.issues.forEach((issue) => {
-        const field = issue.path[0] as keyof FieldErrors;
-        if (!fieldErrors[field]) fieldErrors[field] = issue.message;
-      });
-      setErrors(fieldErrors);
+    const validation = validateContactForm({ fullName, email, message });
+    if (!validation.isValid) {
+      setErrors(validation.errors);
       return;
     }
 

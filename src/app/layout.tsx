@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Unbounded } from "next/font/google";
 import "./globals.css";
 import { config } from "@/data/config";
 
@@ -7,21 +6,6 @@ import Script from "next/script";
 import SiteFrame from "@/components/site-frame";
 import { Providers } from "@/components/providers";
 import { GoogleAnalytics } from "@next/third-parties/google";
-
-/* Body/base font — Space Grotesk, bound to --font-sans (applied as `font-sans`
- * on <html>). Everything that isn't a heading inherits this. */
-const spaceGroteskSans = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-/* Heading font — Unbounded, bound to --font-display and applied to h1–h6. */
-const unbounded = Unbounded({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: config.title,
@@ -104,26 +88,30 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={[
-        spaceGroteskSans.variable,
-        unbounded.variable,
-        "font-sans",
-      ].join(" ")}
+      className="font-sans"
       suppressHydrationWarning
     >
       <head>
-        {/* The Spline runtime lazy-loads its wasm from unpkg; warm the
-            connection early so the 3D scene starts faster. */}
+        {/* Preconnect for Google Fonts & Spline runtime */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Unbounded:wght@200..900&display=swap"
+          rel="stylesheet"
+        />
         <link rel="preconnect" href="https://unpkg.com" crossOrigin="anonymous" />
         <script
+          id="person-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Script
-          defer
-          src={process.env.UMAMI_DOMAIN}
-          data-website-id={process.env.UMAMI_SITE_ID}
-        ></Script>
+        {process.env.UMAMI_DOMAIN && (
+          <Script
+            defer
+            src={process.env.UMAMI_DOMAIN}
+            data-website-id={process.env.UMAMI_SITE_ID}
+          />
+        )}
       </head>
       <body>
         <Providers>
@@ -136,4 +124,3 @@ export default function RootLayout({
     </html>
   );
 }
-

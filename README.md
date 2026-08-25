@@ -1,8 +1,8 @@
-# 🚀 Simhadri Venkata Padmakar 3D Portfolio
+# 🚀 Simhadri Venkata Padmakar — 3D Developer Portfolio
 
-An interactive, modern, and futuristic 3D developer portfolio showcasing my projects, skills, experience, and achievements through immersive animations and a futuristic UI. Built with Next.js, React, TypeScript, and Spline, this portfolio highlights my passion for AI engineering, Machine Learning, and Full-Stack development.
+An interactive, modern, and futuristic 3D developer portfolio showcasing projects, technical skills, experience, and achievements through immersive animations and a futuristic UI. Built with **Next.js 16**, **React 19**, **TypeScript**, **GSAP**, and **Spline 3D**.
 
-> ⭐ If you like this portfolio, consider giving the repository a star!
+> ⭐ If you find this project inspiring, consider giving the repository a star!
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SVenkataPadmakar/Portfolio-main)
 
@@ -10,15 +10,15 @@ An interactive, modern, and futuristic 3D developer portfolio showcasing my proj
 
 ---
 
-# ✨ Features
+# ✨ Highlights & Key Features
 
-- 🎹 **Interactive 3D Keyboard** showcasing technical skills using Spline
-- 🤖 **Agentic AI & ML Showcases** focusing on Multi-Agent architectures
-- 🚀 **Smooth GSAP & Framer Motion** transitions and custom mouse trails
-- 🌌 **Modern Space-themed Cyberpunk UI** with customized themes and local disclaimers
-- 📱 **Fully Responsive Design** supporting mobile, tablet, and desktop viewports
-- 📧 **Interactive Contact Form** powered by Resend for seamless communication
-- ⚡ **Performance-Optimized** using Next.js App Router and Tailwind CSS
+- 🎹 **Interactive 3D Mechanical Keyboard**: Real-time 3D skill visualizer powered by Spline with custom audio, animations, and camera trajectories.
+- 📄 **Digital & ATS-Optimized Résumé**: Integrated online interactive résumé with a 1-page A4 print stylesheet and instant PDF export.
+- 🤖 **Agentic AI & ML Showcases**: Highlights multi-agent systems, LangGraph/LangChain workflows, and production LLM integrations.
+- 🚀 **Smooth GSAP & Framer Motion**: Scroll-driven scene choreography, elastic cursor physics, and micro-interactions.
+- 🌌 **Cyberpunk Dark & Light Modes**: Seamless theme switching with persistent preferences and zero FOUC.
+- 📱 **Fully Responsive Layout**: Adaptive 3D camera angles and layouts optimized across mobile, tablet, and ultra-wide screens.
+- 📧 **Interactive Contact Flow**: Validated contact form with direct email delivery and mailto fallbacks.
 
 ---
 

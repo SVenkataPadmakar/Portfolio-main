@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  cacheComponents: true,
+  allowedDevOrigins: [
+    "localhost",
+    "127.0.0.1",
+    "172.30.160.1",
+    "*.local",
+  ],
   async headers() {
     return [
       {
@@ -17,12 +22,6 @@ const nextConfig = {
       },
       {
         source: "/assets/(.*)",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
-        ],
-      },
-      {
-        source: "/_next/static/(.*)",
         headers: [
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
